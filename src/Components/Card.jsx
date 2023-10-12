@@ -8,15 +8,26 @@ function Card({ data }) {
     <div className="card-container">
       {data.map((country, index) => (
         <div className="card" key={index}>
-          <img
-            src={country.flags.svg}
-            alt={country.name.common}
-          />
+          <div className="imagen">
+            <img src={country.flags.svg} alt={country.name.common} />
+          </div>
           <div>
-            <div>{country.name.common}</div>
-            <div>Population: {country.population}</div>
-            <div>Region: {country.region}</div>
-            <div>Capital: {country.capital}</div>
+            <div>
+              <h2>
+                <strong>{country.name.common}</strong>
+              </h2>
+            </div>
+            <div>
+              <strong>Population:</strong>
+              {country.population}
+            </div>
+            <div>
+              <strong>Region:</strong> {country.region}
+            </div>
+            <div>
+              <strong>Capital:</strong>
+              {country.capital}
+            </div>
           </div>
         </div>
       ))}
