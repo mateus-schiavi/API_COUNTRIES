@@ -9,6 +9,7 @@ function Custom() {
       try {
         const response = await axios.get("https://restcountries.com/v3.1/all");
         setData(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
