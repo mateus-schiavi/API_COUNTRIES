@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function FilterRegions() {
+function FilterRegions({ countries, onFilterChange }) {
   const [data, setData] = useState([]);
   const [continentFilter, setContinentFilter] = useState("");
-  const [continentFlags, setContinentFlags] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,14 +30,14 @@ function FilterRegions() {
   }, []);
 
   const handleContinentChange = (event) => {
-    setContinentFilter(event.target.value);
+    setContinentFilter(event.target.value); 
   };
 
   return (
     <div>
       <label>
         Filter by Continent:
-        <select onChange={handleContinentChange} value={continentFilter}>
+        <select onChange={handleContinentChange} value={selectedRegion}>
           <option value="">All</option>
           <option value="Africa">Africa</option>
           <option value="Americas">Americas</option>
