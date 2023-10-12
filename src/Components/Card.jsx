@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 function Card(props) {
   return (
-    <div>
+    <div className="card">
       <div>{props.imagen}</div>
       <div>
         <div>{props.nombre}</div>
