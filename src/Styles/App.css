@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: flex-end;
   height: 25vh; 
+  margin-top: 9vh;
 }
 *{
   background-color: #f4f9f9;

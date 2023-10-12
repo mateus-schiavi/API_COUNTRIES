@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 function Card({ data }) {
   return (
+    <div>
     <div id='pe'>
     <div className="card-container">
       {data.map((country, index) => (
@@ -30,6 +31,7 @@ function Card({ data }) {
           </div>
         </div>
       ))}
+    </div>
     </div>
     </div>
   );
