@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function Custom() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    const getData = async () => {
-      const res = await fetch('https://restcountries.com/v3.1/all');
-      const datos = await res.json();
-      setData(datos);
-    }
-    getData();
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  console.log(data);
+    fetchData();
+  }, []);
 
   return data;
 }
