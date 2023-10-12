@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 function Card({ data }) {
   return (
+    <div id='pe'>
+    <input  id='p' type="text" placeholder='search for a country'/>
     <div className="card-container">
       {data.map((country, index) => (
         <div className="card" key={index}>
@@ -18,6 +20,7 @@ function Card({ data }) {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 }

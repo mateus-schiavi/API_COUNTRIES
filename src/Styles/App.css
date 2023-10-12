@@ -7,7 +7,6 @@
 }
 
 
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -24,4 +23,15 @@
 
 .card img {
   width: 100%; 
+}
+
+#p{
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color:grey;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: grey;
 }
