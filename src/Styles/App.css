@@ -1,0 +1,27 @@
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100vh; 
+}
+
+
+/* App.css */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card {
+  flex-basis: calc(33.33% - 20px); /* Establece el ancho de cada tarjeta para 3 columnas */
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%; /* Asegura que las imágenes se ajusten al ancho de la tarjeta */
+}
